@@ -227,6 +227,7 @@ export default {
     },
     getCropBoxData() {
       this.data = JSON.stringify(this.$refs.cropper.getCropBoxData(), null, 4);
+
     },
     getData() {
       this.data = JSON.stringify(this.$refs.cropper.getData(), null, 4);
@@ -245,9 +246,9 @@ export default {
       this.$refs.cropper.setCropBoxData(JSON.parse(this.data));
     },
     colorCropBox() {
-
-    var img = document.getElementById("Image");
-    var cnvs = document.getElementById("myCanvas");
+    
+    var img = document.getElementById("image");
+    var cnvs = document.getElementById("cropper-crop-box");
   
     cnvs.style.position = "absolute";
     cnvs.style.left = img.offsetLeft + "px";
